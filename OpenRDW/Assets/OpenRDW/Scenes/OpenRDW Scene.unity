@@ -597,7 +597,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 226325526}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: Tracking Space
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -866,7 +866,7 @@ MonoBehaviour:
   - {r: 0, g: 0, b: 0, a: 1}
   - {r: 0.48627454, g: 0, b: 0.48627454, a: 1}
   - {r: 0, g: 1, b: 1, a: 1}
-  avatarPrefabId: 1
+  avatarPrefabId: 0
   avatarPrefabs:
   - {fileID: 919132149155446097, guid: 40f7755b5cf0da54e87eaee92bde7ce1, type: 3}
   - {fileID: 919132149155446097, guid: e955f9bb479dd8243ae483535d6256ca, type: 3}
@@ -915,7 +915,7 @@ MonoBehaviour:
   - position: {x: 100, y: 0}
     forward: {x: 0, y: 1}
   physicalTargets: []
-  networkingMode: 0
+  networkingMode: 1
   cameraVirtualTopForAllAvatars: {fileID: 0}
   userInterfaceManager: {fileID: 0}
 --- !u!114 &226199563
@@ -1237,7 +1237,7 @@ MonoBehaviour:
     Searching\user0\0\sampling_intervals.csv
   waypoints: []
   samplingIntervals: []
-  pathSeedChoice: 2
+  pathSeedChoice: 0
   waypointIterator: 0
   accumulatedWaypointTime: 0
   simulatedWalker: {fileID: 0}
@@ -1343,7 +1343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 306dea4159f34664e80b61f46bbd9c21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  headTransform: {fileID: 1387029340}
+  headTransform: {fileID: 0}
   redirectorChoice: 9
   resetterChoice: 1
   globalConfiguration: {fileID: 0}
@@ -1464,7 +1464,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &244810058
 Transform:
   m_ObjectHideFlags: 0
@@ -1997,7 +1997,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 922333727}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &922333730
 Camera:
   m_ObjectHideFlags: 0

@@ -111,7 +111,7 @@ public class RedirectionManager : MonoBehaviour {
         else {
             //hide avatar body
             //body.gameObject.SetActive(false);
-            headTransform = transform.Find("Camera");
+            headTransform = Camera.main.transform;
         }
 
 

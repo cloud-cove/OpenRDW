@@ -103,10 +103,10 @@ public static class Utilities
 
     public static bool GetCommandDirPath(out string path)
     {
-        
-        #if UNITY_EDITOR
-            path = EditorUtility.OpenFolderPanel("Choose the dir of command files", "", "");
-        #endif
+        path = "string";
+        // if (UNITY_EDITOR) {
+        //     path = EditorUtility.OpenFolderPanel("Choose the dir of command files", "", "");
+        // }
         return path.Length > 0;
     }
 
