@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public class RedirectionManager : MonoBehaviour {
     public static readonly float MaxSamePosTime = 50;//the max time(in seconds) the avatar can stand on the same position, exceeds this value will make data invalid (stuck in one place)
 
-    public enum RedirectorChoice { None, S2C, S2O, Zigzag, ThomasAPF, MessingerAPF, DynamicAPF, DeepLearning, PassiveHapticAPF , VisPoly};
+    public enum RedirectorChoice { None, S2C, S2O, RightOnly, Zigzag, ThomasAPF, MessingerAPF, DynamicAPF, DeepLearning, PassiveHapticAPF , VisPoly};
     public enum ResetterChoice { None, TwoOneTurn, APF };
 
 
@@ -134,6 +134,8 @@ public class RedirectionManager : MonoBehaviour {
                 return typeof(S2CRedirector);
             case RedirectorChoice.S2O:
                 return typeof(S2ORedirector);
+            case RedirectorChoice.RightOnly:
+                return typeof(RightOnlyRedirector);
             case RedirectorChoice.Zigzag:
                 return typeof(ZigZagRedirector);
             case RedirectorChoice.ThomasAPF:
@@ -159,6 +161,8 @@ public class RedirectionManager : MonoBehaviour {
             return RedirectorChoice.S2C;
         else if (redirector.Equals(typeof(S2ORedirector)))
             return RedirectorChoice.S2O;
+        else if (redirector.Equals(typeof(RightOnlyRedirector)))
+            return RedirectorChoice.RightOnly;
         else if (redirector.Equals(typeof(ZigZagRedirector)))
             return RedirectorChoice.Zigzag;
         else if (redirector.Equals(typeof(ThomasAPF_Redirector)))
@@ -183,6 +187,8 @@ public class RedirectionManager : MonoBehaviour {
                 return typeof(S2CRedirector);
             case "s2o":
                 return typeof(S2ORedirector);
+            case "rightonly":
+                return typeof(RightOnlyRedirector);
             case "zigzag":
                 return typeof(ZigZagRedirector);
             case "thomasapf":
@@ -196,6 +202,7 @@ public class RedirectionManager : MonoBehaviour {
             case "passivehapticapf":
                 return typeof(PassiveHapticAPF_Redirector);
             default:
+                Debug.Log("default to null redirector");
                 return typeof(NullRedirector);
         }
     }
@@ -342,7 +349,10 @@ public class RedirectionManager : MonoBehaviour {
     {
         redirector = this.gameObject.GetComponent<Redirector>();
         if (redirector == null)
+        {
             this.gameObject.AddComponent<NullRedirector>();
+            Debug.Log("default to null redirector");
+        }
         redirector = this.gameObject.GetComponent<Redirector>();
     }
 

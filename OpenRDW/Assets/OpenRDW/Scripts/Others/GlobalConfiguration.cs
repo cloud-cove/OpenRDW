@@ -249,7 +249,7 @@ public class GlobalConfiguration : MonoBehaviour
     public Color virtualTrailColor;
 
 
-    [HideInInspector]
+  //  [HideInInspector]
     public Dictionary<PathSeedChoice, List<Vector2>> pathSeedChoiceToWaypoints;
 
     private List<List<TrailDrawer.Vertice>> realTrailPoints;//real trail in overview mode, realTrailPoints[i][j] indicates avatar i's number j point    

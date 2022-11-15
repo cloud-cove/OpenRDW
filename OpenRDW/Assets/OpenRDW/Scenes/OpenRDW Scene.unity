@@ -658,7 +658,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &226062306
 GameObject:
   m_ObjectHideFlags: 0
@@ -835,7 +835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d97f4f04aa3aa6e4abc407f0d0d45fcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementController: 2
+  movementController: 0
   runInBackstage: 0
   loadFromTxt: 0
   multiCmdFiles: 0
@@ -858,7 +858,7 @@ MonoBehaviour:
   startTimeOfProgram: 
   negArrow: {fileID: 717936904266117204, guid: f68566b61c5ebc74784982a22ecef585, type: 3}
   readyToStart: 0
-  avatarNum: 1
+  avatarNum: 2
   avatarColors:
   - {r: 0.9921569, g: 0.48235297, b: 0, a: 1}
   - {r: 1, g: 0.909804, b: 0.27450982, a: 1}
@@ -880,8 +880,8 @@ MonoBehaviour:
   virtualWorldVisible: 1
   trackingSpaceVisible: 1
   bufferVisible: 1
-  if3dObstacle: 1
-  trackingSpaceChoice: 0
+  if3dObstacle: 0
+  trackingSpaceChoice: 7
   obstacleType: 1
   obstacleHeight: 1
   trackingSpaceFilePath: 
@@ -1237,7 +1237,7 @@ MonoBehaviour:
     Searching\user0\0\sampling_intervals.csv
   waypoints: []
   samplingIntervals: []
-  pathSeedChoice: 0
+  pathSeedChoice: 3
   waypointIterator: 0
   accumulatedWaypointTime: 0
   simulatedWalker: {fileID: 0}
@@ -1344,7 +1344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   headTransform: {fileID: 0}
-  redirectorChoice: 9
+  redirectorChoice: 3
   resetterChoice: 1
   globalConfiguration: {fileID: 0}
   body: {fileID: 226266040}
@@ -1493,7 +1493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxPlayersPerRoom: 20
-  avatarId: 0
+  avatarId: 1
   avatarNetworkingTransformPrefab: {fileID: 7503046916765975192, guid: b78a19f7e4f9ba04d9cc262813e1841c,
     type: 3}
 --- !u!1 &373763094
